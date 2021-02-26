@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreferenceCompat
+        app:key="autoLogin"
+        app:title="@string/enable_auto_login" />
+
+    <SwitchPreferenceCompat
+        app:key="useNFC"
+        app:title="@string/use_nfc" />
+</PreferenceScreen>

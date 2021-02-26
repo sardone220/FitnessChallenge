@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/exercise_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/add_exercise_img"
+            android:layout_width="100dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="@dimen/margin"
+            android:contentDescription="@string/exercise_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/curl_2_manubri" />
+
+        <TextView
+            android:id="@+id/add_exercise_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_toEndOf="@id/add_exercise_img"
+            android:text="@string/title_goes_here"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sub_title"
+            app:layout_constraintStart_toEndOf="@+id/add_exercise_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/exercise_series"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/small_distance"
+            android:layout_marginEnd="@dimen/small_distance"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toStartOf="@+id/card_expander_collapse_arrow"
+            app:layout_constraintStart_toEndOf="@+id/add_exercise_img"
+            app:layout_constraintTop_toBottomOf="@+id/select_exercise_check">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="@string/exercise_series"
+                android:inputType="number"
+                android:textSize="@dimen/caption" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/exercise_repetition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/small_distance"
+            android:layout_marginEnd="@dimen/small_distance"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toStartOf="@+id/card_expander_collapse_arrow"
+            app:layout_constraintStart_toEndOf="@+id/add_exercise_img"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_series">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="@string/exercise_repetition"
+                android:inputType="number"
+                android:textSize="@dimen/caption" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/card_expander_collapse_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/expand_collapse_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_repetition"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/select_exercise_check"
+            style="mater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/add_exercise_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/add_exercise_title" />
+
+
+        <TextView
+            android:id="@+id/add_exercise_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="@dimen/small_distance"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/card_expander_collapse_arrow"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/add_exercise_img"
+            app:layout_constraintTop_toBottomOf="@+id/add_exercise_pick_time_button" />
+
+        <View
+            android:id="@+id/add_card_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/add_exercise_img"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/add_exercise_pick_time_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_cool_down"
+            app:layout_constraintStart_toStartOf="@+id/exercise_repetition"
+            app:layout_constraintTop_toBottomOf="@+id/exercise_repetition" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

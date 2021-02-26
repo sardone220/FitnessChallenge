@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "134329168162",
+    "firebase_url": "https://fitnesschallenge-3cc40.firebaseio.com",
+    "project_id": "fitnesschallenge-3cc40",
+    "storage_bucket": "fitnesschallenge-3cc40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134329168162:android:c018ed1dde74c3ef80757b",
+        "android_client_info": {
+          "package_name": "it.fitnesschallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134329168162-gskl54hk6ap12ml77l0mpuee5mlop2tf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.fitnesschallenge",
+            "certificate_hash": "7cad5fd4276d99b7287b454109b4017f0299f2f3"
+          }
+        },
+        {
+          "client_id": "134329168162-ef3f32s36ta15880tqc34s4gqvkqiepm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmYndPe1oWQL3hqi1HZei8rNR0B05xAKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134329168162-ef3f32s36ta15880tqc34s4gqvkqiepm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

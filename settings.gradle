@@ -1,0 +1,3 @@
+include ':fitnessChallenge'
+rootProject.name='FitnessChallenge'
+include ':nfcreceiver'

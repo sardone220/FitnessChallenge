@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <ProgressBar
+        android:id="@+id/create_list_progress_bar"
+        android:animationResolution="10"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:progress="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/create_list_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/multiline_distance"
+        android:text="@string/_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_list_progress_bar" />
+
+    <TextView
+        android:id="@+id/creation_list_hundred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/multiline_distance"
+        android:text="@string/_100"
+        app:layout_constraintBottom_toBottomOf="@+id/create_list_percent"
+        app:layout_constraintStart_toEndOf="@+id/create_list_percent"
+        app:layout_constraintTop_toTopOf="@+id/create_list_percent" />
+
+    <FrameLayout
+        android:id="@+id/inner_frame_creation_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        app:layout_constraintBottom_toTopOf="@+id/left_key_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creation_list_hundred" />
+
+    <ImageButton
+        android:id="@+id/right_key_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="@dimen/small_distance"
+        android:contentDescription="@string/next"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_keyboard_arrow_right"
+        app:layout_constraintBottom_toTopOf="@+id/next_text"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/left_key_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginBottom="@dimen/small_distance"
+        android:contentDescription="@string/previous"
+        android:backgroundTint="@android:color/transparent"
+        android:src="@drawable/ic_keyboard_arrow_left"
+        app:layout_constraintBottom_toTopOf="@+id/previous_text"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/previous_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/previous"
+        android:textAllCaps="true"
+        android:textSize="@dimen/caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/left_key_arrow"
+        app:layout_constraintStart_toStartOf="@+id/left_key_arrow" />
+
+    <TextView
+        android:id="@+id/next_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:text="@string/next"
+        android:textAllCaps="true"
+        android:textSize="@dimen/caption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/right_key_arrow"
+        app:layout_constraintStart_toStartOf="@+id/right_key_arrow" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_exercise_FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_distance"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/right_key_arrow"
+        app:layout_constraintStart_toEndOf="@+id/left_key_arrow"
+        app:layout_constraintTop_toBottomOf="@+id/inner_frame_creation_list"
+        app:srcCompat="@drawable/ic_add" />
+</androidx.constraintlayout.widget.ConstraintLayout>

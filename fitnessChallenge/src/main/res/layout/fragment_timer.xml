@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Timer">
+
+    <TextView
+        android:id="@+id/timer_fragment_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/breathe_in_rhythm"
+        android:textSize="@dimen/headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/circularImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="@dimen/margin"
+        android:src="@mipmap/meditation"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer_fragment_title" />
+
+    <TextView
+        android:id="@+id/timer_fragment_remaining_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/remaining_time"
+        android:textSize="@dimen/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circularImageView" />
+
+    <ImageButton
+        android:id="@+id/timer_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="@dimen/margin"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/delete_timer"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer_fragment_remaining_time" />
+
+    <ImageButton
+        android:id="@+id/timer_play_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/play_timer"
+        android:src="@drawable/ic_play_circle_filled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer_fragment_remaining_time" />
+
+    <TextView
+        android:id="@+id/timer_fragment_remaining_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/_00_00"
+        android:textSize="@dimen/headline"
+        app:layout_constraintEnd_toEndOf="@+id/timer_fragment_remaining_time_label"
+        app:layout_constraintStart_toStartOf="@+id/timer_fragment_remaining_time_label"
+        app:layout_constraintTop_toBottomOf="@+id/timer_fragment_remaining_time_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

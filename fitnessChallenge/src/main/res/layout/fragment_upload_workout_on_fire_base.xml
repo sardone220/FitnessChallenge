@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadWorkoutOnFireBase">
+
+    <ProgressBar
+        android:id="@+id/upload_workout_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/uploading_workout_uplad_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:text="@string/uploading_your_workout"
+        android:textSize="@dimen/headline"
+        app:layout_constraintBottom_toTopOf="@+id/uploading_workout_please_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/uploading_workout_please_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:text="@string/please_wait_a_few_moment"
+        android:textSize="@dimen/title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/upload_workout_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/multiline_distance"
+        android:text="@string/_0"
+        app:layout_constraintStart_toStartOf="@+id/upload_workout_progress_bar"
+        app:layout_constraintTop_toBottomOf="@+id/upload_workout_progress_bar" />
+
+    <TextView
+        android:id="@+id/upload_workout_hundread_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_100"
+        app:layout_constraintBottom_toBottomOf="@+id/upload_workout_percent"
+        app:layout_constraintStart_toEndOf="@+id/upload_workout_percent"
+        app:layout_constraintTop_toTopOf="@+id/upload_workout_percent" />
+
+    <ImageView
+        android:id="@+id/upload_workout_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:contentDescription="@string/upload_workout_image"
+        android:src="@mipmap/uploading"
+        app:layout_constraintBottom_toTopOf="@+id/uploading_workout_uplad_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload_workout_hundread_lable" />
+</androidx.constraintlayout.widget.ConstraintLayout>
